@@ -34,27 +34,44 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
+        backgroundColor: Color.fromRGBO(50, 145, 145, 1),
       ),
+
+      backgroundColor: Color.fromRGBO(245, 19, 124, 1),
+
       body: Center(
         child: Container(
           width: 300,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+
+              // Username
               TextField(
                 controller: username,
-                decoration: const InputDecoration(
-                  hintText: "Username",
+                decoration: InputDecoration(
+                  labelText: "Username",
+                  filled: true,
+                  fillColor: Colors.orange,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
 
-              const SizedBox(height: 15),
+              const SizedBox(height: 20),
 
+              // Password
               TextField(
                 controller: password,
                 obscureText: true,
-                decoration: const InputDecoration(
-                  hintText: "Password",
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  filled: true,
+                  fillColor: Colors.orange,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
 
