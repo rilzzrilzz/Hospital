@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
         
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
+      //home bisa di komentar atau di hapus
+      //
       home: const LoginPage(),
     );
   }
