@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital/myhomepage.dart';
+import 'package:hospital/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(),
+      home: const LoginPage(),
     );
   }
 }
