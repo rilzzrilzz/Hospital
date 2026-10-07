@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:hospital/myhomepage.dart';
-
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,8 +13,19 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController password = TextEditingController();
 
   void login() {
-    if (username.text.isNotEmpty && password.text.isNotEmpty) {
-      Navigator.push(
+    // Ketentuan A: username/password tidak boleh kosong
+    if (username.text.isEmpty || password.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Username dan password harus diisi!"),
+        ),
+      );
+      return;
+    }
+
+    // Ketentuan B: username dan password harus benar
+    if (username.text == "admin" && password.text == "12345") {
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => const MyHomePage(),
@@ -25,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text("Username dan password harus diisi!"),
+          content: Text("Username atau password salah!"),
         ),
       );
     }
@@ -47,13 +56,14 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-               Center(
-                 child: Image(
+              Center(
+                child: Image(
                   image: AssetImage("assets/klinik remove.png"),
                   width: 200,
                   height: 200,
-                 ),
-               ),
+                ),
+              ),
+
               // Username
               TextField(
                 controller: username,
@@ -88,7 +98,6 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: login,
                 child: const Text("Login"),
-                
               ),
             ],
           ),
