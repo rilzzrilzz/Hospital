@@ -17,10 +17,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hospital"),
-        backgroundColor: Color.fromARGB(255, 237, 243, 243),
+        backgroundColor: Color.fromARGB(255, 9, 235, 235),
       ),
 
-      backgroundColor: Color.fromARGB(245, 9, 235, 235),
+      backgroundColor: Color.fromARGB(245, 243, 247, 247),
 
       body: Center(
         child: Column(
