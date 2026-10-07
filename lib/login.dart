@@ -47,7 +47,13 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-               
+               Center(
+                 child: Image(
+                  image: AssetImage("assets/klinik remove.png"),
+                  width: 200,
+                  height: 200,
+                 ),
+               ),
               // Username
               TextField(
                 controller: username,
