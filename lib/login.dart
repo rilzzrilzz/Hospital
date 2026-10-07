@@ -34,10 +34,10 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
-        backgroundColor: Color.fromRGBO(50, 145, 145, 1),
+        backgroundColor: Color.fromRGBO(244, 248, 248, 1),
       ),
 
-      backgroundColor: Color.fromRGBO(245, 19, 124, 1),
+      backgroundColor: Color.fromRGBO(13, 212, 247, 1),
 
       body: Center(
         child: Container(
