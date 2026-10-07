@@ -15,11 +15,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nama App Kalian"),
+        title: Text("Hospital"),
         backgroundColor: Color.fromARGB(0, 50, 145, 145),
       ),
       //Color.fromARGB( opacity, red, green, blue)
-      backgroundColor: Color.fromARGB(245, 19, 222, 124),
+      backgroundColor: Color.fromARGB(245, 9, 235, 235),
       body: Column(
         children: [
           Center(
