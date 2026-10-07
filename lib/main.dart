@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hospital/login.dart';
+import 'package:hospital/myhomepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +19,13 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       //home bisa di komentar atau di hapus
-      //
-      home: const LoginPage(),
+      //home:const Login (),
+      routes: {
+        //halaman utama awal aplikasi dibuka
+        '/': (context) => const LoginPage(),
+      //pengenalan rute ke halaman homepage 
+      '/home': (context) => const MyHomePage(),
+      },
     );
   }
 }
