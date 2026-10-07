@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:hospital/myhomepage.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -34,10 +36,10 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login"),
-        backgroundColor: Color.fromRGBO(244, 248, 248, 1),
+        backgroundColor: Color.fromRGBO(50, 145, 145, 1),
       ),
 
-      backgroundColor: Color.fromRGBO(13, 212, 247, 1),
+      backgroundColor: Color.fromRGBO(245, 19, 124, 1),
 
       body: Center(
         child: Container(
@@ -50,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
               TextField(
                 controller: username,
                 decoration: InputDecoration(
-                  labelText: "Username",
+                  hintText: "Username",
                   filled: true,
                   fillColor: Colors.orange,
                   border: OutlineInputBorder(
@@ -66,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                 controller: password,
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: "Password",
+                  hintText: "Password",
                   filled: true,
                   fillColor: Colors.orange,
                   border: OutlineInputBorder(
