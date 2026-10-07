@@ -26,6 +26,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Center(
+                 child: Image(
+                  image: AssetImage("assets/klinik remove.png"),
+                  width: 200,
+                  height: 200,
+                 ),
+               ),
             Container(
               width: 300,
               child: TextFormField(
