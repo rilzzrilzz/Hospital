@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,47 +19,46 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Hospital"),
         backgroundColor: Color.fromARGB(255, 237, 243, 243),
       ),
-      //Color.fromARGB( opacity, red, green, blue)
+
       backgroundColor: Color.fromARGB(245, 9, 235, 235),
-      body: Column(
-        children: [
-          Center(
-            child: Container(
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
               width: 300,
               child: TextFormField(
-                // Dekorasi untuk TextFormField
+                textAlign: TextAlign.center,
                 decoration: InputDecoration(
                   fillColor: Colors.orange,
                   hintText: 'Masukan Nama Kamu',
                   filled: true,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(40)),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(40),
+                    ),
                   ),
                 ),
-                // controller untuk ...
                 controller: inputNama,
-                // Ketika Dikirim nanti
                 onFieldSubmitted: (values) {
-                  // isi blablabla ...
                   inputNama.text = values;
                 },
               ),
             ),
-          ),
 
-          // untuk kasih jarak antar widget
-          Padding(
-            padding: EdgeInsets.all(16)
-          ),
+            Padding(
+              padding: EdgeInsets.all(16),
+            ),
 
-          // Tombol
-          ElevatedButton(
-            child: Text("Tampilkan Nama"),
-            onPressed: () {
-              print(inputNama.text);
-            },
-          ),
-        ],
+            ElevatedButton(
+              child: Text("Tampilkan Nama"),
+              onPressed: () {
+                print(inputNama.text);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
